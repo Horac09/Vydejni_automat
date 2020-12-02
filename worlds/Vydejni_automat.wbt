@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.9653655603637085 -0.25106146420544295 -0.07097517914512329 0.6457721648486124
-  position -0.05239037869487004 1.2078931852776953 1.1307970400679577
+  orientation 0.9914486816403497 0.1300219769974152 -0.011126417720726863 6.049261140497582
+  position 0.12262726395874163 0.7923370264649244 1.540471403032304
 }
 TexturedBackground {
 }
@@ -88,7 +88,7 @@ DEF front_size_1 Solid {
   }
 }
 DEF front_size_2 Solid {
-  translation 0 0.45 -0.3
+  translation 0 0.475 -0.3
   rotation 0 -1 0 0
   children [
     Shape {
@@ -97,13 +97,13 @@ DEF front_size_2 Solid {
         metalness 0
       }
       geometry Box {
-        size 0.3 0.1 0.01
+        size 0.3 0.05 0.01
       }
     }
   ]
   name "solid(4)"
   boundingObject Box {
-    size 0.3 0.1 0.01
+    size 0.3 0.05 0.01
   }
 }
 DEF top_size Solid {
@@ -143,4 +143,65 @@ DEF bottom_size Solid {
   boundingObject Box {
     size 0.3 0.2 0.01
   }
+}
+DEF Glass Solid {
+  translation -0.025 0.275 -0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        transparency 0.995
+        metalness 0
+        emissiveColor 1 1 1
+      }
+      geometry Box {
+        size 0.25 0.35 0.01
+      }
+    }
+  ]
+  name "solid(7)"
+  boundingObject Box {
+    size 0.25 0.35 0.01
+  }
+}
+DEF front_size_3 Solid {
+  translation 0.125 0.225 -0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.25 0.01
+      }
+    }
+  ]
+  name "solid(8)"
+  boundingObject Box {
+    size 0.05 0.25 0.01
+  }
+}
+DEF front_size_4 Solid {
+  translation 0.125 0.4025 -0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.095 0.01
+      }
+    }
+  ]
+  name "solid(9)"
+  boundingObject Box {
+    size 0.05 0.095 0.01
+  }
+}
+PointLight {
+  attenuation 0 0 1
+  color 0.8 0.8 0.8
+  intensity 0.1
+  location 0 0.45 -0.35
 }
