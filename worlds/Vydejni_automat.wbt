@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.9914486816403497 0.1300219769974152 -0.011126417720726863 6.049261140497582
-  position 0.12262726395874163 0.7923370264649244 1.540471403032304
+  orientation -0.6092305646548893 -0.7928909027278433 0.012733242387962416 0.134756515133142
+  position -0.02521782416976759 0.39124683733350707 1.051944546900874
 }
 TexturedBackground {
 }
@@ -12,6 +12,25 @@ TexturedBackgroundLight {
 }
 RectangleArena {
   floorSize 1.5 1.5
+}
+DEF slant_desk Solid {
+  translation 0 0.114891 -0.396725
+  rotation 1 0 0 0.261799
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.01 0.2
+      }
+    }
+  ]
+  name "solid(10)"
+  boundingObject Box {
+    size 0.3 0.01 0.2
+  }
 }
 DEF back_size Solid {
   translation 0 0.25 -0.5
@@ -145,7 +164,7 @@ DEF bottom_size Solid {
   }
 }
 DEF Glass Solid {
-  translation -0.025 0.275 -0.3
+  translation -0.025 0.3 -0.3
   children [
     Shape {
       appearance PBRAppearance {
@@ -154,13 +173,13 @@ DEF Glass Solid {
         emissiveColor 1 1 1
       }
       geometry Box {
-        size 0.25 0.35 0.01
+        size 0.25 0.3 0.01
       }
     }
   ]
   name "solid(7)"
   boundingObject Box {
-    size 0.25 0.35 0.01
+    size 0.25 0.3 0.01
   }
 }
 DEF front_size_3 Solid {
