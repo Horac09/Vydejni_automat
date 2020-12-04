@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.6092305646548893 -0.7928909027278433 0.012733242387962416 0.134756515133142
-  position -0.02521782416976759 0.39124683733350707 1.051944546900874
+  orientation -0.5930137950037694 0.7973598822189523 0.11203507112956085 0.4026056802140643
+  position 0.7233279076632844 0.7578607308555932 1.2820170467342256
 }
 TexturedBackground {
 }
@@ -106,6 +106,25 @@ DEF front_size_1 Solid {
     size 0.3 0.1 0.01
   }
 }
+DEF front_size_5 Solid {
+  translation -0.025 0.175 -0.3
+  rotation 0 -1 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.25 0.05 0.01
+      }
+    }
+  ]
+  name "solid(11)"
+  boundingObject Box {
+    size 0.25 0.05 0.01
+  }
+}
 DEF front_size_2 Solid {
   translation 0 0.475 -0.3
   rotation 0 -1 0 0
@@ -164,7 +183,7 @@ DEF bottom_size Solid {
   }
 }
 DEF Glass Solid {
-  translation -0.025 0.3 -0.3
+  translation -0.025 0.325 -0.3
   children [
     Shape {
       appearance PBRAppearance {
@@ -173,13 +192,13 @@ DEF Glass Solid {
         emissiveColor 1 1 1
       }
       geometry Box {
-        size 0.25 0.3 0.01
+        size 0.25 0.25 0.01
       }
     }
   ]
   name "solid(7)"
   boundingObject Box {
-    size 0.25 0.3 0.01
+    size 0.25 0.25 0.01
   }
 }
 DEF front_size_3 Solid {
