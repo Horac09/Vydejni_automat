@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.9984010800111666 0.0541077221669445 -0.016359640412945582 6.0208787669434995
-  position 0.257990662251614 0.9668849669107946 1.7038111949655688
+  orientation 0.9534340997118187 0.25713611883770326 0.1576211721051341 5.102863795900306
+  position -0.04962897382062441 0.8785301469104869 -0.05958823119754747
 }
 TexturedBackground {
 }
@@ -221,7 +221,7 @@ DEF front_size_3 Solid {
   }
 }
 DEF front_size_4 Solid {
-  translation 0.125 0.4025 -0.3
+  translation 0.125 0.415 -0.3
   children [
     Shape {
       appearance PBRAppearance {
@@ -229,13 +229,130 @@ DEF front_size_4 Solid {
         metalness 0
       }
       geometry Box {
-        size 0.05 0.095 0.01
+        size 0.05 0.07 0.01
       }
     }
   ]
   name "solid(9)"
   boundingObject Box {
-    size 0.05 0.095 0.01
+    size 0.05 0.07 0.01
+  }
+}
+DEF front_size_5 Solid {
+  translation 0.1115 0.365 -0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.023 0.03 0.01
+      }
+    }
+  ]
+  name "solid(12)"
+  boundingObject Box {
+    size 0.023 0.03 0.01
+  }
+}
+DEF front_size_7 Solid {
+  translation 0.125 0.364071 -0.277929
+  rotation 1 0 0 0.785398
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.01 0.05 0.005
+      }
+    }
+  ]
+  name "solid(14)"
+  boundingObject Box {
+    size 0.01 0.05 0.005
+  }
+}
+DEF front_size_8 Solid {
+  translation 0.13 0.36 -0.285503
+  rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.03 0.03 0.005
+      }
+    }
+  ]
+  name "solid(15)"
+  boundingObject Box {
+    size 0.03 0.03 0.005
+  }
+}
+DEF front_size_9 Solid {
+  translation 0.12 0.36 -0.285503
+  rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.03 0.03 0.005
+      }
+    }
+  ]
+  name "solid(16)"
+  boundingObject Box {
+    size 0.03 0.03 0.005
+  }
+}
+DEF front_size_6 Solid {
+  translation 0.1385 0.365 -0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 0.023 0.03 0.01
+      }
+    }
+  ]
+  name "solid(13)"
+  boundingObject Box {
+    size 0.023 0.03 0.01
+  }
+}
+DEF red_coin Solid {
+  translation 0.125 0.39 -0.28
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.001
+        radius 0.01
+      }
+    }
+  ]
+  name "solid(17)"
+  boundingObject Cylinder {
+    height 0.001
+    radius 0.01
+  }
+  physics Physics {
+    mass 0.1
   }
 }
 PointLight {
