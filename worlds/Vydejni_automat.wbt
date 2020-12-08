@@ -1,10 +1,15 @@
 #VRML_SIM R2020b utf8
 WorldInfo {
   coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      softCFM 0.0001
+    }
+  ]
 }
 Viewpoint {
-  orientation 0.9534340997118187 0.25713611883770326 0.1576211721051341 5.102863795900306
-  position -0.04962897382062441 0.8785301469104869 -0.05958823119754747
+  orientation -0.602415597738531 -0.7944970904477658 -0.07661475622465458 0.3834114300981659
+  position -0.23865144123824436 0.5443823594133081 1.799928159423133
 }
 TexturedBackground {
 }
@@ -14,350 +19,383 @@ RectangleArena {
   floorSize 1.5 1.5
   wallHeight 0.2
 }
-DEF slant_desk Solid {
-  translation 0 0.114891 -0.396725
-  rotation 1 0 0 0.261799
+DEF Automat Robot {
+  translation 0 0.01 0
   children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
+    DEF piston_1 SliderJoint {
+      jointParameters JointParameters {
       }
-      geometry Box {
-        size 0.3 0.01 0.2
+      device [
+        LinearMotor {
+          name "piston 1"
+          maxVelocity 0.1
+          minPosition -1
+          maxPosition 1
+        }
+      ]
+      endPoint Solid {
+        translation -0.09 0.37 -0.469999
+        rotation 1 0 0 1.5708
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.4 0.4
+              metalness 0
+            }
+            geometry DEF piston_1 Box {
+              size 0.05 0.01 0.05
+            }
+          }
+        ]
+        name "solid(17)"
+        boundingObject USE piston_1
       }
     }
-  ]
-  name "solid(10)"
-  boundingObject Box {
-    size 0.3 0.01 0.2
-  }
-}
-DEF back_size Solid {
-  translation 0 0.25 -0.5
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.3 0.5 0.01
-      }
+    PointLight {
+      attenuation 0 0 1
+      color 0.8 0.8 0.8
+      intensity 0.1
+      location 0 0.45 -0.35
+    }
+    DEF front_size_6 Solid {
+      translation 0.1385 0.365 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_6 Box {
+            size 0.023 0.03 0.01
+          }
+        }
+      ]
+      name "solid(13)"
+      boundingObject USE front_size_6
+    }
+    DEF front_size_9 Solid {
+      translation 0.12 0.36 -0.285503
+      rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_9 Box {
+            size 0.03 0.03 0.005
+          }
+        }
+      ]
+      name "solid(16)"
+      boundingObject USE front_size_9
+    }
+    DEF front_size_8 Solid {
+      translation 0.13 0.36 -0.285503
+      rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_8 Box {
+            size 0.03 0.03 0.005
+          }
+        }
+      ]
+      name "solid(15)"
+      boundingObject USE front_size_8
+    }
+    DEF front_size_7 Solid {
+      translation 0.125 0.364071 -0.277929
+      rotation 1 0 0 0.785398
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_7 Box {
+            size 0.01 0.05 0.005
+          }
+        }
+      ]
+      name "solid(14)"
+      boundingObject USE front_size_7
+    }
+    DEF front_size_5 Solid {
+      translation 0.1115 0.365 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_5 Box {
+            size 0.023 0.03 0.01
+          }
+        }
+      ]
+      name "solid(12)"
+      boundingObject USE front_size_5
+    }
+    DEF front_size_4 Solid {
+      translation 0.125 0.415 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_4 Box {
+            size 0.05 0.07 0.01
+          }
+        }
+      ]
+      name "solid(9)"
+      boundingObject USE front_size_4
+    }
+    DEF front_size_3 Solid {
+      translation 0.125 0.225 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_3 Box {
+            size 0.05 0.25 0.01
+          }
+        }
+      ]
+      name "solid(8)"
+      boundingObject USE front_size_3
+    }
+    DEF Glass Solid {
+      translation -0.025 0.325 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            transparency 0.993
+            metalness 0
+            emissiveColor 1 1 1
+          }
+          geometry DEF glass Box {
+            size 0.25 0.25 0.01
+          }
+        }
+      ]
+      name "solid(7)"
+      boundingObject USE glass
+    }
+    DEF bottom_size Solid {
+      translation 0 0 -0.4
+      rotation 1 0 0 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF bottom_size Box {
+            size 0.3 0.2 0.01
+          }
+        }
+      ]
+      name "solid(6)"
+      boundingObject USE bottom_size
+    }
+    DEF top_size Solid {
+      translation 0 0.5 -0.4
+      rotation 1 0 0 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF top_size Box {
+            size 0.3 0.2 0.01
+          }
+        }
+      ]
+      name "solid(5)"
+      boundingObject USE top_size
+    }
+    DEF front_size_2 Solid {
+      translation 0 0.475 -0.3
+      rotation 0 -1 0 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_2 Box {
+            size 0.3 0.05 0.01
+          }
+        }
+      ]
+      name "solid(4)"
+      boundingObject USE front_size_2
+    }
+    DEF front_size_10 Solid {
+      translation -0.025 0.175 -0.3
+      rotation 0 -1 0 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_10 Box {
+            size 0.25 0.05 0.01
+          }
+        }
+      ]
+      name "solid(11)"
+      boundingObject USE front_size_10
+    }
+    DEF front_size_1 Solid {
+      translation 0 0.05 -0.3
+      rotation 0 -1 0 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_1 Box {
+            size 0.3 0.1 0.01
+          }
+        }
+      ]
+      name "solid(3)"
+      boundingObject USE front_size_1
+    }
+    DEF right_size Solid {
+      translation 0.15 0.25 -0.4
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF right_size Box {
+            size 0.2 0.5 0.01
+          }
+        }
+      ]
+      name "solid(2)"
+      boundingObject USE right_size
+    }
+    DEF left_size Solid {
+      translation -0.15 0.25 -0.4
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF left_size Box {
+            size 0.2 0.5 0.01
+          }
+        }
+      ]
+      name "solid(1)"
+      boundingObject USE left_size
+    }
+    DEF back_size Solid {
+      translation 0 0.25 -0.5
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF back_size Box {
+            size 0.3 0.5 0.01
+          }
+        }
+      ]
+      boundingObject USE back_size
+    }
+    DEF slant_desk Solid {
+      translation 0 0.114891 -0.396725
+      rotation 1 0 0 0.261799
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF slant_desk Box {
+            size 0.3 0.01 0.2
+          }
+        }
+      ]
+      name "solid(10)"
+      boundingObject USE slant_desk
     }
   ]
-  boundingObject Box {
-    size 0.3 0.5 0.01
-  }
-}
-DEF left_size Solid {
-  translation -0.15 0.25 -0.4
-  rotation 0 1 0 -1.5708003061004252
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.2 0.5 0.01
-      }
-    }
-  ]
-  name "solid(1)"
-  boundingObject Box {
-    size 0.2 0.5 0.01
-  }
-}
-DEF right_size Solid {
-  translation 0.15 0.25 -0.4
-  rotation 0 1 0 -1.5708003061004252
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.2 0.5 0.01
-      }
-    }
-  ]
-  name "solid(2)"
-  boundingObject Box {
-    size 0.2 0.5 0.01
-  }
-}
-DEF front_size_1 Solid {
-  translation 0 0.05 -0.3
-  rotation 0 -1 0 0
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.3 0.1 0.01
-      }
-    }
-  ]
-  name "solid(3)"
-  boundingObject Box {
-    size 0.3 0.1 0.01
-  }
-}
-DEF front_size_5 Solid {
-  translation -0.025 0.175 -0.3
-  rotation 0 -1 0 0
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.25 0.05 0.01
-      }
-    }
-  ]
-  name "solid(11)"
-  boundingObject Box {
-    size 0.25 0.05 0.01
-  }
-}
-DEF front_size_2 Solid {
-  translation 0 0.475 -0.3
-  rotation 0 -1 0 0
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.3 0.05 0.01
-      }
-    }
-  ]
-  name "solid(4)"
-  boundingObject Box {
-    size 0.3 0.05 0.01
-  }
-}
-DEF top_size Solid {
-  translation 0 0.5 -0.4
-  rotation 1 0 0 -1.5707953071795862
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.3 0.2 0.01
-      }
-    }
-  ]
-  name "solid(5)"
-  boundingObject Box {
-    size 0.3 0.2 0.01
-  }
-}
-DEF bottom_size Solid {
-  translation 0 0 -0.4
-  rotation 1 0 0 -1.5707953071795862
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.3 0.2 0.01
-      }
-    }
-  ]
-  name "solid(6)"
-  boundingObject Box {
-    size 0.3 0.2 0.01
-  }
-}
-DEF Glass Solid {
-  translation -0.025 0.325 -0.3
-  children [
-    Shape {
-      appearance PBRAppearance {
-        transparency 0.993
-        metalness 0
-        emissiveColor 1 1 1
-      }
-      geometry Box {
-        size 0.25 0.25 0.01
-      }
-    }
-  ]
-  name "solid(7)"
-  boundingObject Box {
-    size 0.25 0.25 0.01
-  }
-}
-DEF front_size_3 Solid {
-  translation 0.125 0.225 -0.3
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.05 0.25 0.01
-      }
-    }
-  ]
-  name "solid(8)"
-  boundingObject Box {
-    size 0.05 0.25 0.01
-  }
-}
-DEF front_size_4 Solid {
-  translation 0.125 0.415 -0.3
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.05 0.07 0.01
-      }
-    }
-  ]
-  name "solid(9)"
-  boundingObject Box {
-    size 0.05 0.07 0.01
-  }
-}
-DEF front_size_5 Solid {
-  translation 0.1115 0.365 -0.3
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.023 0.03 0.01
-      }
-    }
-  ]
-  name "solid(12)"
-  boundingObject Box {
-    size 0.023 0.03 0.01
-  }
-}
-DEF front_size_7 Solid {
-  translation 0.125 0.364071 -0.277929
-  rotation 1 0 0 0.785398
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.01 0.05 0.005
-      }
-    }
-  ]
-  name "solid(14)"
-  boundingObject Box {
-    size 0.01 0.05 0.005
-  }
-}
-DEF front_size_8 Solid {
-  translation 0.13 0.36 -0.285503
-  rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.03 0.03 0.005
-      }
-    }
-  ]
-  name "solid(15)"
-  boundingObject Box {
-    size 0.03 0.03 0.005
-  }
-}
-DEF front_size_9 Solid {
-  translation 0.12 0.36 -0.285503
-  rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.03 0.03 0.005
-      }
-    }
-  ]
-  name "solid(16)"
-  boundingObject Box {
-    size 0.03 0.03 0.005
-  }
-}
-DEF front_size_6 Solid {
-  translation 0.1385 0.365 -0.3
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0.2 0.2 0.2
-        metalness 0
-      }
-      geometry Box {
-        size 0.023 0.03 0.01
-      }
-    }
-  ]
-  name "solid(13)"
-  boundingObject Box {
-    size 0.023 0.03 0.01
-  }
+  controller "vydejni_automat"
 }
 DEF red_coin Solid {
-  translation 0.125 0.39 -0.28
-  rotation 0 0 1 1.5708
+  translation 0.00500206 0.0015 -0.03
   children [
     Shape {
       appearance PBRAppearance {
         baseColor 1 0 0
         metalness 0
       }
-      geometry Cylinder {
-        height 0.001
+      geometry DEF cylinder_geom Cylinder {
+        height 0.003
         radius 0.01
       }
     }
   ]
   name "solid(17)"
-  boundingObject Cylinder {
-    height 0.001
-    radius 0.01
-  }
+  boundingObject USE cylinder_geom
   physics Physics {
-    mass 0.1
   }
 }
-PointLight {
-  attenuation 0 0 1
-  color 0.8 0.8 0.8
-  intensity 0.1
-  location 0 0.45 -0.35
+DEF yellow_coin Solid {
+  translation 0 0.0015 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        metalness 0
+      }
+      geometry DEF yellow_coin Cylinder {
+        height 0.003
+        radius 0.01
+      }
+    }
+  ]
+  boundingObject USE yellow_coin
+  physics Physics {
+  }
+}
+DEF blue_coin Solid {
+  translation 0.04 0.0015 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.1 1
+        metalness 0
+      }
+      geometry DEF blue_coin Cylinder {
+        height 0.003
+        radius 0.01
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE blue_coin
+  physics Physics {
+  }
 }
