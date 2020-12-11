@@ -8,8 +8,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.47288265161553655 0.8734536860927138 0.11602006745434254 5.687163796032783
-  position -0.7121668217927688 0.7101303548082283 1.0227388743742432
+  orientation 0.875540430548442 0.48193068733759 0.03423108349683022 6.014020896921731
+  position -0.37567401802723316 0.5755734765328057 1.2027298249660925
 }
 TexturedBackground {
 }
@@ -23,6 +23,111 @@ DEF Automat Robot {
   translation 0 0.01 0
   rotation 1 0 0 0
   children [
+    DEF piston_6 SliderJoint {
+      jointParameters JointParameters {
+      }
+      device [
+        LinearMotor {
+          name "piston 6"
+          maxVelocity 0.1
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0.28 -0.48
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.4 0.4
+              metalness 0
+            }
+            geometry DEF piston_6 Box {
+              size 0.05 0.05 0.01
+            }
+          }
+        ]
+        name "solid(30)"
+        boundingObject USE piston_6
+      }
+    }
+    DEF piston_5 SliderJoint {
+      jointParameters JointParameters {
+      }
+      device [
+        LinearMotor {
+          name "piston 5"
+          maxVelocity 0.1
+        }
+      ]
+      endPoint Solid {
+        translation -0.02 0.28 -0.48
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.4 0.4
+              metalness 0
+            }
+            geometry DEF piston_5 Box {
+              size 0.05 0.05 0.01
+            }
+          }
+        ]
+        name "solid(29)"
+        boundingObject USE piston_5
+      }
+    }
+    DEF piston_4 SliderJoint {
+      jointParameters JointParameters {
+      }
+      device [
+        LinearMotor {
+          name "piston 4"
+          maxVelocity 0.1
+        }
+      ]
+      endPoint Solid {
+        translation -0.1 0.28 -0.48
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.4 0.4
+              metalness 0
+            }
+            geometry DEF piston_4 Box {
+              size 0.05 0.05 0.01
+            }
+          }
+        ]
+        name "solid(28)"
+        boundingObject USE piston_4
+      }
+    }
+    DEF piston_3 SliderJoint {
+      jointParameters JointParameters {
+      }
+      device [
+        LinearMotor {
+          name "piston 3"
+          maxVelocity 0.1
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0.37 -0.48
+        rotation 5.662748247667581e-07 0.7071067811864341 0.7071067811864341 3.14159
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.4 0.4
+              metalness 0
+            }
+            geometry DEF piston_3 Box {
+              size 0.05 0.01 0.05
+            }
+          }
+        ]
+        name "solid(27)"
+        boundingObject USE piston_3
+      }
+    }
     DEF shelf_1 Solid {
       translation -0.0199992 0.33 -0.44
       rotation 0 0.7071062811861719 0.7071072811865696 3.14159
@@ -67,7 +172,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation 0.045 0.37 -0.48
+        translation -0.02 0.37 -0.48
         rotation 0 0.7071062811861719 0.7071072811865696 3.14159
         children [
           Shape {
@@ -94,7 +199,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation -0.09 0.37 -0.48
+        translation -0.1 0.37 -0.48
         rotation 1 0 0 1.5708
         children [
           Shape {
@@ -367,6 +472,108 @@ DEF Automat Robot {
       ]
       name "solid(1)"
       boundingObject USE left_size
+    }
+    DEF shelf_block_1 Solid {
+      translation -0.06 0.38 -0.44
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_block_1 Box {
+            size 0.1 0.1 0.01
+          }
+        }
+      ]
+      name "solid(21)"
+      boundingObject USE shelf_block_1
+    }
+    DEF shelf_block_4 Solid {
+      translation -0.06 0.29 -0.44
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_block_4 Box {
+            size 0.1 0.1 0.01
+          }
+        }
+      ]
+      name "solid(24)"
+      boundingObject USE shelf_block_4
+    }
+    DEF shelf_block_2 Solid {
+      translation 0.02 0.38 -0.44
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_block_2 Box {
+            size 0.1 0.1 0.01
+          }
+        }
+      ]
+      name "solid(22)"
+      boundingObject USE shelf_block_2
+    }
+    DEF shelf_block_5 Solid {
+      translation 0.02 0.29 -0.44
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_block_5 Box {
+            size 0.1 0.1 0.01
+          }
+        }
+      ]
+      name "solid(25)"
+      boundingObject USE shelf_block_5
+    }
+    DEF shelf_block_3 Solid {
+      translation 0.1 0.38 -0.44
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_block_3 Box {
+            size 0.1 0.1 0.01
+          }
+        }
+      ]
+      name "solid(23)"
+      boundingObject USE shelf_block_3
+    }
+    DEF shelf_block_6 Solid {
+      translation 0.1 0.29 -0.44
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_block_6 Box {
+            size 0.1 0.1 0.01
+          }
+        }
+      ]
+      name "solid(26)"
+      boundingObject USE shelf_block_6
     }
     DEF back_size Solid {
       translation 0 0.25 -0.5
