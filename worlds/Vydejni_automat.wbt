@@ -8,8 +8,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.602415597738531 -0.7944970904477658 -0.07661475622465458 0.3834114300981659
-  position -0.23865144123824436 0.5443823594133081 1.799928159423133
+  orientation 0.47288265161553655 0.8734536860927138 0.11602006745434254 5.687163796032783
+  position -0.7121668217927688 0.7101303548082283 1.0227388743742432
 }
 TexturedBackground {
 }
@@ -21,7 +21,69 @@ RectangleArena {
 }
 DEF Automat Robot {
   translation 0 0.01 0
+  rotation 1 0 0 0
   children [
+    DEF shelf_1 Solid {
+      translation -0.0199992 0.33 -0.44
+      rotation 0 0.7071062811861719 0.7071072811865696 3.14159
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_1 Box {
+            size 0.25 0.1 0.01
+          }
+        }
+      ]
+      name "solid(19)"
+      boundingObject USE shelf_1
+    }
+    DEF shelf_2 Solid {
+      translation -0.0199992 0.24 -0.44
+      rotation 0 0.7071062811861719 0.7071072811865696 3.14159
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF shelf_2 Box {
+            size 0.25 0.1 0.01
+          }
+        }
+      ]
+      name "solid(20)"
+      boundingObject USE shelf_2
+    }
+    DEF piston_2 SliderJoint {
+      jointParameters JointParameters {
+      }
+      device [
+        LinearMotor {
+          name "piston 2"
+          maxVelocity 0.1
+        }
+      ]
+      endPoint Solid {
+        translation 0.045 0.37 -0.48
+        rotation 0 0.7071062811861719 0.7071072811865696 3.14159
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.4 0.4
+              metalness 0
+            }
+            geometry DEF piston_2 Box {
+              size 0.05 0.01 0.05
+            }
+          }
+        ]
+        name "solid(18)"
+        boundingObject USE piston_2
+      }
+    }
     DEF piston_1 SliderJoint {
       jointParameters JointParameters {
       }
@@ -29,12 +91,10 @@ DEF Automat Robot {
         LinearMotor {
           name "piston 1"
           maxVelocity 0.1
-          minPosition -1
-          maxPosition 1
         }
       ]
       endPoint Solid {
-        translation -0.09 0.37 -0.469999
+        translation -0.09 0.37 -0.48
         rotation 1 0 0 1.5708
         children [
           Shape {
@@ -363,7 +423,8 @@ DEF red_coin Solid {
   }
 }
 DEF yellow_coin Solid {
-  translation 0 0.0015 0
+  translation 0.00499839 0.0115 0.0200001
+  rotation 0.5773482691863839 0.5773502691873165 0.5773522691882489 -2.094395307179586
   children [
     Shape {
       appearance PBRAppearance {
