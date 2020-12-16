@@ -8,14 +8,15 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.7130565970836692 -0.6933058162101776 -0.10429446085290067 0.4678414825701763
-  position -0.24603717430711217 0.6299616749594904 0.5231246828235949
+  orientation 0.9872043401842362 -0.15304397750300186 -0.044778696625378686 5.923248663574499
+  position 0.07987720717590946 0.700622622031272 0.839692639909706
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  translation 0 0.005 0
   floorSize 1.5 1.5
   wallHeight 0.2
 }
@@ -23,6 +24,38 @@ DEF Automat Robot {
   translation 0 0.01 0
   rotation 1 0 0 0
   children [
+    DEF unvisible_box_1 Solid {
+      translation 0.118 0 0.24
+      children [
+        Shape {
+          appearance PBRAppearance {
+            transparency 1
+            metalness 0
+          }
+          geometry DEF unvisible_box_1 Box {
+            size 0.01 0.02 1.1
+          }
+        }
+      ]
+      name "solid(33)"
+      boundingObject USE unvisible_box_1
+    }
+    DEF unvisible_box_2 Solid {
+      translation 0.132 0 0.24
+      children [
+        Shape {
+          appearance PBRAppearance {
+            transparency 1
+            metalness 0
+          }
+          geometry DEF unvisible_box_1 Box {
+            size 0.01 0.02 1.1
+          }
+        }
+      ]
+      name "solid(34)"
+      boundingObject USE unvisible_box_1
+    }
     DEF point_light_2 PointLight {
       attenuation 0 0 1
       intensity 0.1
@@ -646,11 +679,11 @@ DEF Automat Robot {
       boundingObject USE slant_desk
     }
   ]
-  controller "vydejni_automat"
+  controller "vydejni_automat_2"
 }
 DEF red_coin Solid {
-  translation 0.125 0.01 -0.25
-  rotation 0.5773489358533613 0.5773489358533613 0.5773529358529169 -2.094395307179586
+  translation 0.125 0.015 -0.25
+  rotation 0.5773489358533613 0.5773489358533613 0.5773529358529169 -2.0944003061004253
   children [
     Shape {
       appearance PBRAppearance {
@@ -688,7 +721,7 @@ DEF yellow_coin Solid {
   }
 }
 DEF blue_coin Solid {
-  translation 0.125 0.01 -0.28
+  translation 0.125 0.015 -0.28
   rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
   children [
     Shape {
