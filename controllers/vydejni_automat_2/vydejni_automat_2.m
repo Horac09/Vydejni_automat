@@ -39,44 +39,51 @@ pos_6 = 0;
 f = true;
 
 while wb_robot_step(TIME_STEP) ~= -1
-  while f
-    x = input('Zadejte cislo 1-6  Vase cislo: ')
-    if x >= 1 && x <= 6
-    f = false;
-end
-end
-
-switch x
-
-case 1
-  pos_1 = pos_1 + 0.03;
-  wb_motor_set_position(motor_1, pos_1);
-  x = -1;
-  
-case 2
-  pos_2 = pos_2 + 0.03;
-  wb_motor_set_position(motor_2, pos_2);
-  x = -1;
-
-case 3
-  pos_3 = pos_3 + 0.03;
-  wb_motor_set_position(motor_3, pos_3);
-  x = -1;
-
-case 4
-  pos_4 = pos_4 + 0.03;
-  wb_motor_set_position(motor_4, pos_4);
-  x = -1;
-
-case 5
-  pos_5 = pos_5 + 0.03;
-  wb_motor_set_position(motor_5, pos_5);
-  x = -1;
-
-case 6
-  pos_6 = pos_6 + 0.03;
-  wb_motor_set_position(motor_6, pos_6);
-  x = -1;
-  f = true;
-end
+    while f
+        x = input('Zadejte číslo 1-6  Vaše číslo: ')
+        if x >= 1 && x <= 6
+            f = false;
+        else disp('Neplatné číslo!')
+        end
+    end
+    
+    switch x
+        
+        case 1
+            disp('Produkt č.1 je vydáván')
+            pos_1 = pos_1 + 0.03;
+            wb_motor_set_position(motor_1, pos_1);
+            x = -1;
+            
+        case 2
+            disp('Produkt č.2 je vydáván')
+            pos_2 = pos_2 + 0.03;
+            wb_motor_set_position(motor_2, pos_2);
+            x = -1;
+            
+        case 3
+            disp('Produkt č.3 je vydáván')
+            pos_3 = pos_3 + 0.03;
+            wb_motor_set_position(motor_3, pos_3);
+            x = -1;
+            
+        case 4
+            disp('Produkt č.4 je vydáván')
+            pos_4 = pos_4 + 0.03;
+            wb_motor_set_position(motor_4, pos_4);
+            x = -1;
+            
+        case 5
+            disp('Produkt č.5 je vydáván')
+            pos_5 = pos_5 + 0.03;
+            wb_motor_set_position(motor_5, pos_5);
+            x = -1;
+            
+        case 6
+            disp('Produkt č.6 je vydáván')
+            pos_6 = pos_6 + 0.03;
+            wb_motor_set_position(motor_6, pos_6);
+            x = -1;
+            
+    end
 end

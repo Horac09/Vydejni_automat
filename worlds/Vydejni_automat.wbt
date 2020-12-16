@@ -1,5 +1,7 @@
 #VRML_SIM R2020b utf8
 WorldInfo {
+  basicTimeStep 64
+  FPS 120
   coordinateSystem "NUE"
   contactProperties [
     ContactProperties {
@@ -8,8 +10,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.9872043401842362 -0.15304397750300186 -0.044778696625378686 5.923248663574499
-  position 0.07987720717590946 0.700622622031272 0.839692639909706
+  orientation 0.6714578570622889 0.7348734537531397 0.09542197418965168 5.8453342386634715
+  position -0.18319284223023724 0.6180829744415131 0.7628638273676933
 }
 TexturedBackground {
 }
@@ -702,7 +704,7 @@ DEF red_coin Solid {
   }
 }
 DEF yellow_coin Solid {
-  translation 0.125 0.3915 -0.27
+  translation 0.125 0.0215 -0.22
   rotation 0.5773482691863839 0.5773502691873165 0.5773522691882489 -2.094395307179586
   children [
     Shape {
