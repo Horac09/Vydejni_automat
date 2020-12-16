@@ -8,8 +8,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.875540430548442 0.48193068733759 0.03423108349683022 6.014020896921731
-  position -0.37567401802723316 0.5755734765328057 1.2027298249660925
+  orientation -0.7130565970836692 -0.6933058162101776 -0.10429446085290067 0.4678414825701763
+  position -0.24603717430711217 0.6299616749594904 0.5231246828235949
 }
 TexturedBackground {
 }
@@ -23,6 +23,11 @@ DEF Automat Robot {
   translation 0 0.01 0
   rotation 1 0 0 0
   children [
+    DEF point_light_2 PointLight {
+      attenuation 0 0 1
+      intensity 0.1
+      location 0.15 0.3 -0.4
+    }
     DEF piston_6 SliderJoint {
       jointParameters JointParameters {
       }
@@ -33,7 +38,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation 0.06 0.28 -0.48
+        translation 0.075 0.275 -0.48
         children [
           Shape {
             appearance PBRAppearance {
@@ -41,7 +46,7 @@ DEF Automat Robot {
               metalness 0
             }
             geometry DEF piston_6 Box {
-              size 0.05 0.05 0.01
+              size 0.04 0.07 0.02
             }
           }
         ]
@@ -59,7 +64,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation -0.02 0.28 -0.48
+        translation 0.005 0.275 -0.48
         children [
           Shape {
             appearance PBRAppearance {
@@ -67,7 +72,7 @@ DEF Automat Robot {
               metalness 0
             }
             geometry DEF piston_5 Box {
-              size 0.05 0.05 0.01
+              size 0.04 0.07 0.02
             }
           }
         ]
@@ -85,7 +90,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation -0.1 0.28 -0.48
+        translation -0.065 0.275 -0.48
         children [
           Shape {
             appearance PBRAppearance {
@@ -93,7 +98,7 @@ DEF Automat Robot {
               metalness 0
             }
             geometry DEF piston_4 Box {
-              size 0.05 0.05 0.01
+              size 0.04 0.07 0.02
             }
           }
         ]
@@ -111,7 +116,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation 0.06 0.37 -0.48
+        translation 0.075 0.375 -0.48
         rotation 5.662748247667581e-07 0.7071067811864341 0.7071067811864341 3.14159
         children [
           Shape {
@@ -120,7 +125,7 @@ DEF Automat Robot {
               metalness 0
             }
             geometry DEF piston_3 Box {
-              size 0.05 0.01 0.05
+              size 0.04 0.02 0.07
             }
           }
         ]
@@ -129,7 +134,7 @@ DEF Automat Robot {
       }
     }
     DEF shelf_1 Solid {
-      translation -0.0199992 0.33 -0.44
+      translation 0.005 0.325 -0.44
       rotation 0 0.7071062811861719 0.7071072811865696 3.14159
       children [
         Shape {
@@ -138,7 +143,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF shelf_1 Box {
-            size 0.25 0.1 0.01
+            size 0.2 0.124 0.02
           }
         }
       ]
@@ -146,7 +151,7 @@ DEF Automat Robot {
       boundingObject USE shelf_1
     }
     DEF shelf_2 Solid {
-      translation -0.0199992 0.24 -0.44
+      translation 0.005 0.225 -0.44
       rotation 0 0.7071062811861719 0.7071072811865696 3.14159
       children [
         Shape {
@@ -155,7 +160,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF shelf_2 Box {
-            size 0.25 0.1 0.01
+            size 0.2 0.125 0.02
           }
         }
       ]
@@ -172,7 +177,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation -0.02 0.37 -0.48
+        translation 0.005 0.375 -0.48
         rotation 0 0.7071062811861719 0.7071072811865696 3.14159
         children [
           Shape {
@@ -181,7 +186,7 @@ DEF Automat Robot {
               metalness 0
             }
             geometry DEF piston_2 Box {
-              size 0.05 0.01 0.05
+              size 0.04 0.02 0.07
             }
           }
         ]
@@ -199,7 +204,7 @@ DEF Automat Robot {
         }
       ]
       endPoint Solid {
-        translation -0.1 0.37 -0.48
+        translation -0.065 0.375 -0.48
         rotation 1 0 0 1.5708
         children [
           Shape {
@@ -208,7 +213,7 @@ DEF Automat Robot {
               metalness 0
             }
             geometry DEF piston_1 Box {
-              size 0.05 0.01 0.05
+              size 0.04 0.02 0.07
             }
           }
         ]
@@ -231,7 +236,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_6 Box {
-            size 0.023 0.03 0.01
+            size 0.023 0.03 0.02
           }
         }
       ]
@@ -248,7 +253,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_9 Box {
-            size 0.03 0.03 0.005
+            size 0.03 0.03 0.006
           }
         }
       ]
@@ -265,7 +270,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_8 Box {
-            size 0.03 0.03 0.005
+            size 0.03 0.03 0.006
           }
         }
       ]
@@ -273,8 +278,8 @@ DEF Automat Robot {
       boundingObject USE front_size_8
     }
     DEF front_size_7 Solid {
-      translation 0.125 0.364071 -0.277929
-      rotation 1 0 0 0.785398
+      translation 0.125 0.358 -0.272929
+      rotation 1 0 0 1.0472
       children [
         Shape {
           appearance PBRAppearance {
@@ -282,12 +287,63 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_7 Box {
-            size 0.01 0.05 0.005
+            size 0.015 0.05 0.01
           }
         }
       ]
       name "solid(14)"
       boundingObject USE front_size_7
+    }
+    DEF coin_slant_desk Solid {
+      translation 0.13 0.33 -0.361838
+      rotation 1 0 0 1.4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF coin_slant_desk Box {
+            size 0.04 0.12 0.02
+          }
+        }
+      ]
+      name "solid(23)"
+      boundingObject USE coin_slant_desk
+    }
+    DEF coin_slant_desk_2 Solid {
+      translation 0.13 0.275 -0.437273
+      rotation 1 0 0 1.7
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF coin_slant_desk_2 Box {
+            size 0.04 0.12 0.02
+          }
+        }
+      ]
+      name "solid(25)"
+      boundingObject USE coin_slant_desk_2
+    }
+    DEF coin_slant_desk_3 Solid {
+      translation 0.13 0.2 -0.361838
+      rotation 1 0 0 1.4
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF coin_slant_desk_3 Box {
+            size 0.04 0.12 0.04
+          }
+        }
+      ]
+      name "solid(24)"
+      boundingObject USE coin_slant_desk_3
     }
     DEF front_size_5 Solid {
       translation 0.1115 0.365 -0.3
@@ -298,12 +354,44 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_5 Box {
-            size 0.023 0.03 0.01
+            size 0.023 0.03 0.02
           }
         }
       ]
       name "solid(12)"
       boundingObject USE front_size_5
+    }
+    DEF front_size_11 Solid {
+      translation 0.1115 0.115 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_11 Box {
+            size 0.023 0.03 0.02
+          }
+        }
+      ]
+      name "solid(26)"
+      boundingObject USE front_size_11
+    }
+    DEF front_size_12 Solid {
+      translation 0.1385 0.115 -0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            metalness 0
+          }
+          geometry DEF front_size_12 Box {
+            size 0.023 0.03 0.02
+          }
+        }
+      ]
+      name "solid(32)"
+      boundingObject USE front_size_12
     }
     DEF front_size_4 Solid {
       translation 0.125 0.415 -0.3
@@ -314,7 +402,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_4 Box {
-            size 0.05 0.07 0.01
+            size 0.05 0.07 0.02
           }
         }
       ]
@@ -322,7 +410,7 @@ DEF Automat Robot {
       boundingObject USE front_size_4
     }
     DEF front_size_3 Solid {
-      translation 0.125 0.225 -0.3
+      translation 0.125 0.24 -0.3
       children [
         Shape {
           appearance PBRAppearance {
@@ -330,7 +418,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_3 Box {
-            size 0.05 0.25 0.01
+            size 0.05 0.22 0.02
           }
         }
       ]
@@ -338,7 +426,7 @@ DEF Automat Robot {
       boundingObject USE front_size_3
     }
     DEF Glass Solid {
-      translation -0.025 0.325 -0.3
+      translation 0.375 0.325 -0.3
       children [
         Shape {
           appearance PBRAppearance {
@@ -347,7 +435,7 @@ DEF Automat Robot {
             emissiveColor 1 1 1
           }
           geometry DEF glass Box {
-            size 0.25 0.25 0.01
+            size 0.2 0.25 0.02
           }
         }
       ]
@@ -355,7 +443,7 @@ DEF Automat Robot {
       boundingObject USE glass
     }
     DEF bottom_size Solid {
-      translation 0 0 -0.4
+      translation 0.025 0 -0.4
       rotation 1 0 0 -1.5707953071795862
       children [
         Shape {
@@ -364,7 +452,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF bottom_size Box {
-            size 0.3 0.2 0.01
+            size 0.25 0.2 0.01
           }
         }
       ]
@@ -372,7 +460,7 @@ DEF Automat Robot {
       boundingObject USE bottom_size
     }
     DEF top_size Solid {
-      translation 0 0.5 -0.4
+      translation 0.025 0.5 -0.4
       rotation 1 0 0 -1.5707953071795862
       children [
         Shape {
@@ -381,7 +469,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF top_size Box {
-            size 0.3 0.2 0.01
+            size 0.25 0.2 0.02
           }
         }
       ]
@@ -389,7 +477,7 @@ DEF Automat Robot {
       boundingObject USE top_size
     }
     DEF front_size_2 Solid {
-      translation 0 0.475 -0.3
+      translation 0.025 0.475 -0.3
       rotation 0 -1 0 0
       children [
         Shape {
@@ -398,7 +486,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_2 Box {
-            size 0.3 0.05 0.01
+            size 0.25 0.05 0.02
           }
         }
       ]
@@ -406,7 +494,7 @@ DEF Automat Robot {
       boundingObject USE front_size_2
     }
     DEF front_size_10 Solid {
-      translation -0.025 0.175 -0.3
+      translation 0 0.175 -0.3
       rotation 0 -1 0 0
       children [
         Shape {
@@ -415,7 +503,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_10 Box {
-            size 0.25 0.05 0.01
+            size 0.2 0.05 0.02
           }
         }
       ]
@@ -423,7 +511,7 @@ DEF Automat Robot {
       boundingObject USE front_size_10
     }
     DEF front_size_1 Solid {
-      translation 0 0.05 -0.3
+      translation 0.025 0.05 -0.3
       rotation 0 -1 0 0
       children [
         Shape {
@@ -432,15 +520,33 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_1 Box {
-            size 0.3 0.1 0.01
+            size 0.25 0.1 0.02
           }
         }
       ]
       name "solid(3)"
       boundingObject USE front_size_1
     }
-    DEF right_size Solid {
+    DEF right_size_glass Solid {
       translation 0.15 0.25 -0.4
+      rotation 0 1 0 -1.5708003061004252
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.2
+            transparency 0.2
+            metalness 0
+          }
+          geometry DEF right_size_glass Box {
+            size 0.2 0.5 0.02
+          }
+        }
+      ]
+      name "solid(2)"
+      boundingObject USE right_size_glass
+    }
+    DEF right_size_2 Solid {
+      translation 0.11 0.25 -0.4
       rotation 0 1 0 -1.5708003061004252
       children [
         Shape {
@@ -448,16 +554,16 @@ DEF Automat Robot {
             baseColor 0.2 0.2 0.2
             metalness 0
           }
-          geometry DEF right_size Box {
-            size 0.2 0.5 0.01
+          geometry DEF right_size_2 Box {
+            size 0.2 0.5 0.02
           }
         }
       ]
-      name "solid(2)"
-      boundingObject USE right_size
+      name "solid(31)"
+      boundingObject USE right_size_2
     }
     DEF left_size Solid {
-      translation -0.15 0.25 -0.4
+      translation -0.1 0.25 -0.4
       rotation 0 1 0 -1.5708003061004252
       children [
         Shape {
@@ -466,7 +572,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF left_size Box {
-            size 0.2 0.5 0.01
+            size 0.2 0.5 0.02
           }
         }
       ]
@@ -474,7 +580,7 @@ DEF Automat Robot {
       boundingObject USE left_size
     }
     DEF shelf_block_1 Solid {
-      translation -0.06 0.38 -0.44
+      translation -0.03 0.325 -0.44
       rotation 0 1 0 -1.5708003061004252
       children [
         Shape {
@@ -483,32 +589,15 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF shelf_block_1 Box {
-            size 0.1 0.1 0.01
+            size 0.125 0.2 0.02
           }
         }
       ]
       name "solid(21)"
       boundingObject USE shelf_block_1
     }
-    DEF shelf_block_4 Solid {
-      translation -0.06 0.29 -0.44
-      rotation 0 1 0 -1.5708003061004252
-      children [
-        Shape {
-          appearance PBRAppearance {
-            baseColor 0.2 0.2 0.2
-            metalness 0
-          }
-          geometry DEF shelf_block_4 Box {
-            size 0.1 0.1 0.01
-          }
-        }
-      ]
-      name "solid(24)"
-      boundingObject USE shelf_block_4
-    }
     DEF shelf_block_2 Solid {
-      translation 0.02 0.38 -0.44
+      translation 0.04 0.325 -0.44
       rotation 0 1 0 -1.5708003061004252
       children [
         Shape {
@@ -517,66 +606,15 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF shelf_block_2 Box {
-            size 0.1 0.1 0.01
+            size 0.125 0.2 0.02
           }
         }
       ]
       name "solid(22)"
       boundingObject USE shelf_block_2
     }
-    DEF shelf_block_5 Solid {
-      translation 0.02 0.29 -0.44
-      rotation 0 1 0 -1.5708003061004252
-      children [
-        Shape {
-          appearance PBRAppearance {
-            baseColor 0.2 0.2 0.2
-            metalness 0
-          }
-          geometry DEF shelf_block_5 Box {
-            size 0.1 0.1 0.01
-          }
-        }
-      ]
-      name "solid(25)"
-      boundingObject USE shelf_block_5
-    }
-    DEF shelf_block_3 Solid {
-      translation 0.1 0.38 -0.44
-      rotation 0 1 0 -1.5708003061004252
-      children [
-        Shape {
-          appearance PBRAppearance {
-            baseColor 0.2 0.2 0.2
-            metalness 0
-          }
-          geometry DEF shelf_block_3 Box {
-            size 0.1 0.1 0.01
-          }
-        }
-      ]
-      name "solid(23)"
-      boundingObject USE shelf_block_3
-    }
-    DEF shelf_block_6 Solid {
-      translation 0.1 0.29 -0.44
-      rotation 0 1 0 -1.5708003061004252
-      children [
-        Shape {
-          appearance PBRAppearance {
-            baseColor 0.2 0.2 0.2
-            metalness 0
-          }
-          geometry DEF shelf_block_6 Box {
-            size 0.1 0.1 0.01
-          }
-        }
-      ]
-      name "solid(26)"
-      boundingObject USE shelf_block_6
-    }
     DEF back_size Solid {
-      translation 0 0.25 -0.5
+      translation 0.025 0.25 -0.5
       children [
         Shape {
           appearance PBRAppearance {
@@ -584,15 +622,15 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF back_size Box {
-            size 0.3 0.5 0.01
+            size 0.25 0.5 0.02
           }
         }
       ]
       boundingObject USE back_size
     }
     DEF slant_desk Solid {
-      translation 0 0.114891 -0.396725
-      rotation 1 0 0 0.261799
+      translation 0.025 0.065 -0.401207
+      rotation 1 0 0 0.15
       children [
         Shape {
           appearance PBRAppearance {
@@ -600,7 +638,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF slant_desk Box {
-            size 0.3 0.01 0.2
+            size 0.25 0.1 0.2
           }
         }
       ]
@@ -611,7 +649,8 @@ DEF Automat Robot {
   controller "vydejni_automat"
 }
 DEF red_coin Solid {
-  translation 0.00500206 0.0015 -0.03
+  translation 0.125 0.01 -0.25
+  rotation 0.5773489358533613 0.5773489358533613 0.5773529358529169 -2.094395307179586
   children [
     Shape {
       appearance PBRAppearance {
@@ -630,7 +669,7 @@ DEF red_coin Solid {
   }
 }
 DEF yellow_coin Solid {
-  translation 0.00499839 0.0115 0.0200001
+  translation 0.125 0.3915 -0.27
   rotation 0.5773482691863839 0.5773502691873165 0.5773522691882489 -2.094395307179586
   children [
     Shape {
@@ -649,7 +688,8 @@ DEF yellow_coin Solid {
   }
 }
 DEF blue_coin Solid {
-  translation 0.04 0.0015 0
+  translation 0.125 0.01 -0.28
+  rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
   children [
     Shape {
       appearance PBRAppearance {

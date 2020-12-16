@@ -12,6 +12,7 @@
 
 TIME_STEP = 64;
 
+
 % get and enable devices, e.g.:
 motor = wb_robot_get_device('piston 1');
 wb_motor_set_velocity(motor, 0.025);
