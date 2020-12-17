@@ -10,8 +10,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.9814914639287056 -0.19104833358071394 0.013230286131403528 5.841173005351516
-  position 0.03645136623733728 0.5058259193795834 0.07061142382707511
+  orientation -0.660178332942155 -0.7255142844057166 -0.19440574023669757 0.6210759013945986
+  position -0.24397610016884963 0.6453889588306764 0.40955122614478645
 }
 TexturedBackground {
 }
@@ -23,7 +23,7 @@ RectangleArena {
   wallHeight 0.2
 }
 DEF coca_cola Solid {
-  translation 0.006 0.276 -0.39
+  translation 0.006 0.276 -0.41
   children [
     Shape {
       appearance PBRAppearance {
@@ -78,9 +78,72 @@ DEF coca_cola Solid {
     }
   ]
   name "coca_cola"
+  boundingObject USE coca_cola
+  physics Physics {
+  }
+}
+DEF coca_cola Solid {
+  translation 0.006 0.276 -0.45
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF coca_cola Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF coca_cola Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/coca-cola.jpeg"
+          ]
+        }
+      }
+      geometry DEF coca_cola Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "coca_cola(1)"
+  boundingObject USE coca_cola
+  physics Physics {
+  }
 }
 DEF sprite Solid {
-  translation -0.064 0.276 -0.39
+  translation -0.064 0.276 -0.41
   children [
     Shape {
       appearance PBRAppearance {
@@ -135,9 +198,72 @@ DEF sprite Solid {
     }
   ]
   name "sprite"
+  boundingObject USE sprite
+  physics Physics {
+  }
+}
+DEF sprite Solid {
+  translation -0.064 0.276 -0.45
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF sprite Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF sprite Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/sprite.png"
+          ]
+        }
+      }
+      geometry DEF sprite Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "sprite(1)"
+  boundingObject USE sprite
+  physics Physics {
+  }
 }
 DEF fanta Solid {
-  translation 0.076 0.276 -0.39
+  translation 0.076 0.276 -0.41
   children [
     Shape {
       appearance PBRAppearance {
@@ -192,9 +318,72 @@ DEF fanta Solid {
     }
   ]
   name "fanta"
+  boundingObject USE fanta
+  physics Physics {
+  }
+}
+DEF fanta Solid {
+  translation 0.076 0.276 -0.45
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF fanta Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF fanta Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/Fanta.jpg"
+          ]
+        }
+      }
+      geometry DEF fanta Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "fanta(1)"
+  boundingObject USE fanta
+  physics Physics {
+  }
 }
 DEF red_bull Solid {
-  translation 0.076 0.376 -0.39
+  translation 0.076 0.376 -0.41
   children [
     Shape {
       appearance PBRAppearance {
@@ -249,9 +438,72 @@ DEF red_bull Solid {
     }
   ]
   name "red_bull"
+  boundingObject USE red_bull
+  physics Physics {
+  }
+}
+DEF red_bull Solid {
+  translation 0.076 0.376 -0.45
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF red_bull Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF red_bull Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/red_bull.jpeg"
+          ]
+        }
+      }
+      geometry DEF red_bull Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "red_bull(1)"
+  boundingObject USE red_bull
+  physics Physics {
+  }
 }
 DEF pepsi Solid {
-  translation 0.006 0.376 -0.39
+  translation 0.006 0.376 -0.41
   children [
     Shape {
       appearance PBRAppearance {
@@ -306,9 +558,72 @@ DEF pepsi Solid {
     }
   ]
   name "pepsi"
+  boundingObject USE pepsi
+  physics Physics {
+  }
+}
+DEF pepsi Solid {
+  translation 0.006 0.376 -0.45
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF pepsi Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF pepsi Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/pepsi.jpg"
+          ]
+        }
+      }
+      geometry DEF pepsi Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "pepsi(1)"
+  boundingObject USE pepsi
+  physics Physics {
+  }
 }
 DEF grepl Solid {
-  translation -0.064 0.376 -0.39
+  translation -0.064 0.376 -0.41
   children [
     Shape {
       appearance PBRAppearance {
@@ -363,6 +678,69 @@ DEF grepl Solid {
     }
   ]
   name "grepl"
+  boundingObject USE grepl
+  physics Physics {
+  }
+}
+DEF grepl Solid {
+  translation -0.064 0.376 -0.45
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF grepl Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF grepl Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/Grepl.png"
+          ]
+        }
+      }
+      geometry DEF grepl Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "grepl(1)"
+  boundingObject USE grepl
+  physics Physics {
+  }
 }
 DEF Automat Robot {
   translation 0 0.01 0
@@ -429,6 +807,8 @@ DEF Automat Robot {
         ]
         name "solid(30)"
         boundingObject USE piston_6
+        physics Physics {
+        }
       }
     }
     DEF piston_5 SliderJoint {
@@ -455,6 +835,8 @@ DEF Automat Robot {
         ]
         name "solid(29)"
         boundingObject USE piston_5
+        physics Physics {
+        }
       }
     }
     DEF piston_4 SliderJoint {
@@ -481,6 +863,8 @@ DEF Automat Robot {
         ]
         name "solid(28)"
         boundingObject USE piston_4
+        physics Physics {
+        }
       }
     }
     DEF piston_3 SliderJoint {
@@ -508,6 +892,8 @@ DEF Automat Robot {
         ]
         name "solid(27)"
         boundingObject USE piston_3
+        physics Physics {
+        }
       }
     }
     DEF shelf_1 Solid {
@@ -569,6 +955,8 @@ DEF Automat Robot {
         ]
         name "solid(18)"
         boundingObject USE piston_2
+        physics Physics {
+        }
       }
     }
     DEF piston_1 SliderJoint {
@@ -596,6 +984,8 @@ DEF Automat Robot {
         ]
         name "solid(17)"
         boundingObject USE piston_1
+        physics Physics {
+        }
       }
     }
     PointLight {
@@ -621,7 +1011,7 @@ DEF Automat Robot {
       boundingObject USE front_size_6
     }
     DEF front_size_9 Solid {
-      translation 0.12 0.36 -0.285503
+      translation 0.12 0.37 -0.285503
       rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
       children [
         Shape {
@@ -630,7 +1020,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_9 Box {
-            size 0.03 0.03 0.006
+            size 0.05 0.04 0.006
           }
         }
       ]
@@ -638,7 +1028,7 @@ DEF Automat Robot {
       boundingObject USE front_size_9
     }
     DEF front_size_8 Solid {
-      translation 0.13 0.36 -0.285503
+      translation 0.13 0.37 -0.285503
       rotation 2.3464099999870814e-06 0.9999999999944944 2.3464099999870814e-06 1.5708
       children [
         Shape {
@@ -647,7 +1037,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_8 Box {
-            size 0.03 0.03 0.006
+            size 0.05 0.04 0.006
           }
         }
       ]
@@ -655,7 +1045,7 @@ DEF Automat Robot {
       boundingObject USE front_size_8
     }
     DEF front_size_7 Solid {
-      translation 0.125 0.358 -0.272929
+      translation 0.125 0.343 -0.272929
       rotation 1 0 0 1.0472
       children [
         Shape {
@@ -664,7 +1054,7 @@ DEF Automat Robot {
             metalness 0
           }
           geometry DEF front_size_7 Box {
-            size 0.015 0.05 0.01
+            size 0.016 0.06 0.03
           }
         }
       ]
@@ -871,7 +1261,7 @@ DEF Automat Robot {
       boundingObject USE front_size_2
     }
     DEF front_size_10 Solid {
-      translation 0 0.175 -0.3
+      translation 0 0.225 -0.3
       rotation 0 -1 0 0
       children [
         Shape {
@@ -1046,7 +1436,7 @@ DEF red_coin Solid {
   }
 }
 DEF yellow_coin Solid {
-  translation 0.125 0.0215 -0.22
+  translation 0.125 0.0315 -0.22
   rotation 0.5773482691863839 0.5773502691873165 0.5773522691882489 -2.094395307179586
   children [
     Shape {
@@ -1065,7 +1455,7 @@ DEF yellow_coin Solid {
   }
 }
 DEF blue_coin Solid {
-  translation 0.125 0.025 -0.28
+  translation 0.125 0.03 -0.18
   rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
   children [
     Shape {
