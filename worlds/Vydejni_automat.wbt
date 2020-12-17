@@ -10,17 +10,359 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.6013527779304436 0.7907970928783085 0.1140824016689448 5.763790674639816
-  position -0.2857473420373825 0.6587990548203886 0.7692003237548548
+  orientation 0.9814914639287056 -0.19104833358071394 0.013230286131403528 5.841173005351516
+  position 0.03645136623733728 0.5058259193795834 0.07061142382707511
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  translation 0 0.005 0
+  translation 0 0.015 0
   floorSize 1.5 1.5
   wallHeight 0.2
+}
+DEF coca_cola Solid {
+  translation 0.006 0.276 -0.39
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF coca_cola Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF coca_cola Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/coca-cola.jpeg"
+          ]
+        }
+      }
+      geometry DEF coca_cola Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "coca_cola"
+}
+DEF sprite Solid {
+  translation -0.064 0.276 -0.39
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF sprite Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF sprite Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/sprite.png"
+          ]
+        }
+      }
+      geometry DEF sprite Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "sprite"
+}
+DEF fanta Solid {
+  translation 0.076 0.276 -0.39
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF fanta Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF fanta Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/Fanta.jpg"
+          ]
+        }
+      }
+      geometry DEF fanta Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "fanta"
+}
+DEF red_bull Solid {
+  translation 0.076 0.376 -0.39
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF red_bull Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF red_bull Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/red_bull.jpeg"
+          ]
+        }
+      }
+      geometry DEF red_bull Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "red_bull"
+}
+DEF pepsi Solid {
+  translation 0.006 0.376 -0.39
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF pepsi Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF pepsi Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/pepsi.jpg"
+          ]
+        }
+      }
+      geometry DEF pepsi Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "pepsi"
+}
+DEF grepl Solid {
+  translation -0.064 0.376 -0.39
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/bot_can.png"
+          ]
+        }
+      }
+      geometry DEF grepl Cylinder {
+        height 0.06
+        radius 0.02
+        side FALSE
+        top FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/top_can.png"
+          ]
+        }
+      }
+      geometry DEF grepl Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        side FALSE
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        metalness 0
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/Grepl.png"
+          ]
+        }
+      }
+      geometry DEF grepl Cylinder {
+        bottom FALSE
+        height 0.06
+        radius 0.02
+        top FALSE
+      }
+    }
+  ]
+  name "grepl"
 }
 DEF Automat Robot {
   translation 0 0.01 0
