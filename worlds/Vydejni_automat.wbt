@@ -10,8 +10,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.6714578570622889 0.7348734537531397 0.09542197418965168 5.8453342386634715
-  position -0.18319284223023724 0.6180829744415131 0.7628638273676933
+  orientation 0.6013527779304436 0.7907970928783085 0.1140824016689448 5.763790674639816
+  position -0.2857473420373825 0.6587990548203886 0.7692003237548548
 }
 TexturedBackground {
 }
@@ -681,10 +681,10 @@ DEF Automat Robot {
       boundingObject USE slant_desk
     }
   ]
-  controller "vydejni_automat_2"
+  controller "vydejni_automat"
 }
 DEF red_coin Solid {
-  translation 0.125 0.015 -0.25
+  translation 0.125 0.025 -0.25
   rotation 0.5773489358533613 0.5773489358533613 0.5773529358529169 -2.0944003061004253
   children [
     Shape {
@@ -723,7 +723,7 @@ DEF yellow_coin Solid {
   }
 }
 DEF blue_coin Solid {
-  translation 0.125 0.015 -0.28
+  translation 0.125 0.025 -0.28
   rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
   children [
     Shape {
