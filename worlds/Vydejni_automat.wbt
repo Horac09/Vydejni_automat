@@ -10,8 +10,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.660178332942155 -0.7255142844057166 -0.19440574023669757 0.6210759013945986
-  position -0.24397610016884963 0.6453889588306764 0.40955122614478645
+  orientation -0.9351994305381692 -0.33177382274154443 -0.12380692898439256 0.35419938470381584
+  position -0.03435264191139393 0.6296850116021011 0.6974186215230305
 }
 TexturedBackground {
 }
@@ -1193,7 +1193,7 @@ DEF Automat Robot {
       boundingObject USE front_size_3
     }
     DEF Glass Solid {
-      translation 0.375 0.325 -0.3
+      translation 0.005 0.35 -0.3
       children [
         Shape {
           appearance PBRAppearance {
@@ -1202,7 +1202,7 @@ DEF Automat Robot {
             emissiveColor 1 1 1
           }
           geometry DEF glass Box {
-            size 0.2 0.25 0.02
+            size 0.2 0.2 0.02
           }
         }
       ]
@@ -1301,7 +1301,6 @@ DEF Automat Robot {
         Shape {
           appearance PBRAppearance {
             baseColor 0.2 0.2 0.2
-            transparency 0.2
             metalness 0
           }
           geometry DEF right_size_glass Box {
