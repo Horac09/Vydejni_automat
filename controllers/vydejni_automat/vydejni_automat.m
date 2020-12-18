@@ -50,10 +50,12 @@ while wb_robot_step(TIME_STEP) ~= -1
         disp('6 Fanta za 20 Kč')
         disp('Vyberte si váš oblíbený produkt 1-6')
         disp(' ')
-        x = input('Váš produkt: ')
+        x = input('Váš produkt: ');
         if x >= 1 && x <= 6
             f = false;
-        else disp('Špatný výběr produktu!')
+        else 
+          disp(' ')
+          disp('Špatný výběr produktu!')
         end
     end
     
@@ -61,6 +63,7 @@ while wb_robot_step(TIME_STEP) ~= -1
         
         case 1
             if pos_1 == -0.045
+                disp(' ')
                 disp('Produkt byl vyprodán, prosím zvolte jiný produkt nebo kontaktujte obsluhu')
                 pos_1 = pos_1 + 0.045;
                 wb_motor_set_position(motor_1, pos_1);
